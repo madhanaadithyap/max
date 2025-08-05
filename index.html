@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Riddle Game</title>
+  <style>
+
+</style>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+    :root {
+  --gold: #000C66;
+  --pink:#050A30;
+  --green:#0000FF;
+  --aqua:#7EC8E3;
+}
+    *{
+        font-family: Comfortaa, Arial, sans-serif;
+        user-select: none;
+        transition: .5s;
+        font-size: 2vw;
+        color: white;
+    }
+    body {
+      
+      background: var(--gold);
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #game-container {
+      background: linear-gradient(to right, black 50% , white 50%);
+      background-size: 100px 100px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+        transform: translate(-50%,-50%);
+      text-align: left;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .question {
+      padding: 20px;
+      
+    }
+    label.option {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+      
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+      user-select: none;
+      transform: scale(2);
+      
+    }
+    #score {
+      text-align: center;
+      background-color: #000;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      overflow: hidden;
+
+    }
+    #next-btn{
+        display: none;
+    }
+    #intro{
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width:100vw;
+        height: 100vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    #next-btn, #start-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+ 
+      cursor: pointer;
+      background-color: #444;
+      border: none;
+      border-radius: 5px;
+     
+    }
+   
+    #next-btn:hover, #start-btn:hover {
+      background-color: white;
+      color: black;
+    }
+    #options-form{
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        padding-left: 15vw;
+        
+    }
+    #question-container{
+        width: 100vw;
+        background-color: rgba(0,0,0,0.8);
+        padding:10vh 0px 10vh 0px;
+    }
+    @media (max-width:900px){
+        *{
+            font-size: 6vw;
+        }
+
+    }
+
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <div id="question-container">
+        <div id="questionnumber"></div>
+      <div class="question" id="question"></div>
+      <form id="options-form"></form>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+<div id="intro">
+    <h1>You will be asked 10 random riddles ...test your mathematical and logical reasoning skills</h1>
+      <button id="start-btn" onclick="startGame()">Start Game</button>
+      </div>
+    </div>
+    <div id="score" style="display:none;"></div>
+    
+  </div>
+<div class="foot">
+    <p></p>
+</div>
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
